@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist Login</title>
+    <link rel="icon" type="image/png" href="image/musify-logo.png">
+    <link rel="stylesheet" href="MusicLogin.css">
+</head>
+<body>
+    <video autoplay loop muted plays-inline class="backgroundv">
+        <source src="image/video.mp4" type="video/mp4">
+    </video>
+    <div class="login-container">
+        <h2 class="title"><img src="image/musify-logo.png"> MUSIFY </h2>
+        <div class="login-box">
+            <div class="logo"><img src="image/musify-logo.png"></div>
+            <h2>ACCOUNT LOGIN</h2>
+            <form>
+                <div class="input-group">
+                    <label for="username">
+                        <img src="image/account.png" alt="User Icon">
+                    </label>
+                    <input type="email" id="username" placeholder="Email address" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">
+                        <img src="image/Lock Icon.png" alt="Lock Icon">
+                    </label>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <div class="options">
+                    <label>
+                        <input type="checkbox"> Remember Me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit"><a href="MusicHomePage.html" style="color: white; text-decoration: none;">Login</a></button>
+                <p class="or">Or login with</p>
+                <div class="social-icons">
+                    <a href="#"><img src="image/Facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="image/Instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="image/Gmail.png" alt="Gmail"></a>
+                </div>
+                <p class="signup">Don't have an Account? <a  onclick="window.location.href='MusicSignup.html'"   href="#">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
