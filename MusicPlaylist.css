@@ -1,0 +1,1539 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, sans-serif;
+
+}
+
+.backgroundv{
+
+    position: fixed;
+
+    right: 0;
+
+    bottom: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    object-fit: cover;
+
+    z-index: -1;
+
+}
+
+body {
+
+    background: #ddd;
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+}
+
+.header {
+
+    width: 100%;
+
+    background: #294E28;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    height: 50px;
+
+    font-size: 20px;
+
+    z-index: 1000;
+
+}
+
+.header input {
+
+    width: 400px;
+
+    padding: 5px;
+
+    border-radius: 5px;
+
+    border: none;
+
+    margin-left: 20px;
+
+}
+
+.header .right-section {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+    cursor: pointer;
+
+}
+
+
+
+.Chats {
+
+    position: absolute;
+
+    height: 40px;
+
+    width: 40px;
+
+    top: 7px;
+
+    right: 485px;
+
+}
+
+
+
+.notif {
+
+    position: absolute;
+
+    height: 35px;
+
+    width: 35px;
+
+    top: 7px;
+
+    right: 385px;
+
+}
+
+
+
+.About {
+
+    position: absolute;
+
+    height: 25px;
+
+    width: 25px;
+
+    top: 11px;
+
+    right: 225px;
+
+}
+
+
+
+.Account {
+
+    position: absolute;
+
+    height: 25px;
+
+    width: 25px;
+
+    top: 11px;
+
+    right: 95px;
+
+}
+
+.sidebar {
+
+    width: 60px;
+
+    height: 100vh;
+
+    position: fixed;
+
+    top: 30px;
+
+    left: 0;
+
+    padding: 10px;
+
+    background-color: #084017;
+
+    color: white;
+
+    overflow: hidden;
+
+    transition: width 0.3s ease-in-out;
+
+    z-index: 1;
+
+}
+
+.sidebar:hover {
+
+    width: 200px;
+
+}
+
+.sidebar:hover .itemss .text {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    cursor: pointer;
+
+}
+
+.itemss {
+
+    display: flex;
+
+    align-items: center;
+
+    margin: 20px 0;
+
+    cursor: pointer;
+
+}
+
+.itemss .icon {
+
+    width: 40px;
+
+    height: 35px;
+
+    flex-shrink: 0;
+
+    fill: white;
+
+    margin-right: 15px;
+
+    cursor: pointer;
+
+}
+
+.itemss .text {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    margin-left: 15px;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+}
+
+.sidebar .active, 
+
+.sidebar .active1,
+
+.sidebar .active2,
+
+.sidebar .active3,
+
+.sidebar .active4 {
+
+    background: white;
+
+    color: black;
+
+    border-radius: 10px;
+
+    padding: 5px;
+
+}
+
+
+
+.main-home {
+
+    display: flex;
+
+    position: absolute;
+
+    width: 700px;
+
+    height: 300px;
+
+    top: 50px;
+
+    left: 30px;
+
+    padding: 10px;
+
+}
+
+.main-home .musify {
+
+    position: absolute;
+
+    width: 680px;
+
+    height: 260px;
+
+    padding: 10px;
+
+}
+
+.main-home .musify-logo {
+
+    position: absolute;
+
+    width: 260px;
+
+    height: 260px;
+
+    left: 600px;
+
+    padding: 10px;
+
+}
+
+.home-search {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 40px;
+
+    left: 60px;
+
+    bottom: 0;
+
+    margin-top: 100px;
+
+    border-radius: 10px;
+
+}
+
+
+
+.category-side {
+
+    width: 620px;
+
+    position: absolute;
+
+    top: 55px;
+
+    right: 0px;
+
+    display: inline-block;
+
+    gap: 20px;
+
+    height: 340px;
+
+}
+
+.category {
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+    color: white;
+
+    margin-bottom: 15px;
+
+    width: 600px;
+
+}
+
+.category-box {
+
+    position: relative;
+
+    width: 140px;
+
+    height: 140px;
+
+    padding: 10px;
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    margin-right: 10px;
+
+    cursor: pointer;
+
+}
+
+.category-box:hover {
+
+    transform: scale(0.9);
+
+}
+
+.category-box img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+}
+
+.category-box p {
+
+    font-size: 1rem;
+
+    position: absolute;
+
+    bottom: 5px;
+
+    font-weight: bold;
+
+    color: white;
+
+}
+
+
+
+.carousel {
+
+    overflow: hidden;
+
+    width: 96%;
+
+    position: absolute;
+
+    bottom: 80px;
+
+    left: 62px;
+
+}
+
+.Popular-Artist {
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+    color: white;
+
+    margin-bottom: 5px;
+
+}
+
+.caption {
+
+    margin-top: 5px;
+
+    font-size: 1.3rem;
+
+    color: white;
+
+    font: bolder;
+
+}
+
+.caption1 {
+
+    margin-top: 1px;
+
+    font-size: 0.9rem;
+
+    color: white;
+
+    font-style: italic;
+
+}
+
+.wrap {
+
+    display: grid;
+
+    grid-auto-flow: column;
+
+    grid-auto-columns: 250px;
+
+    justify-items: stretch;
+
+    animation: slide 15s linear infinite;
+
+    width: max-content;
+
+}
+
+.wrap img {
+
+    width: 200px;
+
+    height: 200px;
+
+    border-radius: 100px;
+
+    object-fit: cover;
+
+}
+
+@keyframes slide {
+
+    to {
+
+        translate: calc(-4 * 250px);
+
+    }  
+
+}
+
+
+
+.now-playing-bar {
+
+    position: fixed;
+
+    bottom: 0;
+
+    width: 100%;
+
+    background: transparent;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 10px 20px;
+
+    backdrop-filter: blur(30px);
+
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+
+    z-index: 1;
+
+}
+
+.song-info {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.album-cover {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 5px;
+
+    margin-right: 10px;
+
+}
+
+.song-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.song-title {
+
+    font-weight: bold;
+
+}
+
+.controlsh {
+
+    position: inherit;
+
+    align-items: center;
+
+    right: 31%;
+
+    margin-bottom: 6px;
+
+}
+
+.controlsh button {
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    margin: 0 5px;
+
+}
+
+.progress-bar {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 30%;
+
+}
+
+.progress-bar input {
+
+    width: 100%;
+
+    margin: 0 10px;
+
+}
+
+
+
+.playlist1 {
+
+    width:1340px;
+
+    position: absolute;
+
+    top: 70px;
+
+    right: 0; 
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    align-items: center;
+
+}
+
+.playlist-bar {
+
+    display: inline-block;
+
+    height: 300px;
+
+    width: 30vh;
+
+    background-color: #126527;
+
+    margin: 15px;
+
+    margin-top: 0;
+
+    padding: 10px;
+
+    border-radius: 15px;
+
+}
+
+.playlist-bar img {
+
+    height: 220px;
+
+    width: 200px;
+
+    border-radius: 15px;
+
+}
+
+.playlist-bar h2 {
+
+    font-size: 23px;
+
+}
+
+.playlist-bar p {
+
+    font-size: 13px;
+
+}
+
+
+
+.favorites {
+
+    width:1340px;
+
+    position: absolute;
+
+    top: 70px;
+
+    right: 0; 
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    align-items: center;
+
+}
+
+.fav-bar {
+
+    display: inline-block;
+
+    height: 300px;
+
+    width: 30vh;
+
+    background-color: #126527;
+
+    margin: 15px;
+
+    margin-top: 0;
+
+    padding: 10px;
+
+    border-radius: 15px;
+
+}
+
+.fav-bar img {
+
+    height: 220px;
+
+    width: 100%;
+
+    border-radius: 15px;
+
+}
+
+.fav-bar h2 {
+
+    font-size: 20px;
+
+}
+
+.fav-bar p {
+
+    font-size: 13px;
+
+}
+
+
+
+.main-content {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    margin-left: 200px;
+
+    margin-top: 50px;
+
+    width: calc(100% - 900px);
+
+}
+
+
+
+.now-playing {
+
+    text-align: center;
+
+    background: rgb(45, 94, 10);
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+
+    width: 500px;
+
+    height: 530px;
+
+}
+
+.now-playing img {
+
+    width: 100%;
+
+    height: 380px;
+
+    border-radius: 10px;
+
+}
+
+.controls {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 10px;
+
+}
+
+.controls button {
+
+    background: none;
+
+    border: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    margin: 0 10px;
+
+}
+
+
+
+.playlist {
+
+    width: 700px;
+
+    padding: 10px;
+
+    position: fixed;
+
+    right: 0;
+
+    top: 50px;
+
+    height: calc(100vh - 50px);
+
+    overflow-y: auto;
+
+}
+
+.song {
+
+    background: #126527;
+
+    color: white;
+
+    padding: 10px;
+
+    margin: 8px 0;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    height: 70px;
+
+    font-size: 16px;
+
+}
+
+.song .info {
+
+    flex: 1;
+
+}
+
+.song img {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    margin-right: 10px;
+
+}   
+
+.song button {
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+
+.playlist4 {
+
+    width: 1000px;
+
+    padding: 10px;
+
+    position: fixed;
+
+    right: 0;
+
+    top: 50px;
+
+    height: calc(100vh - 50px);
+
+    overflow-y: auto;
+
+}
+
+
+
+.Music_Chats{
+
+    position: relative;
+
+    width: 750px;
+
+    height: 400px;
+
+    top: 60px;
+
+    left: 220px;
+
+}
+
+
+
+.Chats_Playing{
+
+    text-align: center;
+
+    background: rgb(45, 94, 10);
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+
+    width: 100%;
+
+    height: 440px;
+
+}
+
+
+
+.Chats_Playing img{
+
+    width: 100%;
+
+    height: 320px;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+}
+
+
+
+.Chats_Controls {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+
+.Chats_Controls button {
+
+    background: none;
+
+    border: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    margin: 0 10px;
+
+}
+
+
+
+.Chat{
+
+    width: 530px;
+
+    padding: 10px;
+
+    position: fixed;
+
+    right: 0;
+
+    top: 60px;
+
+    height: calc(100vh - 70px);
+
+}
+
+
+
+.Chat-box {
+
+    width: 500px;
+
+    padding: 10px;
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 5px;
+
+    height: 663.5px;
+
+    border-top-right-radius: 20px;
+
+    border-top-left-radius: 20px;
+
+    overflow-y: auto;
+
+    background-color: #209a3f;
+
+}
+
+
+
+.tabs {
+
+    width: 450px;
+
+    height: 50px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    position: absolute;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    left: 25px;
+
+    background-color: #247037;
+
+    border-radius: 15px;
+
+}
+
+
+
+.active-chats {
+
+    height: 40px;
+
+    width: 150px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    top: 5px;
+
+    left: 5px;
+
+    border-radius: 15px;
+
+    background-color: white;
+
+    cursor: pointer;
+
+}
+
+
+
+.active-tab {
+
+    height: 40px;
+
+    width: 140px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    top: 5px;
+
+    left: 0;
+
+    border-radius: 15px;
+
+    background-color: white;
+
+    color: #8f99cc;
+
+    cursor: pointer;
+
+    transition: var(--main-transition);
+
+}
+
+
+
+.tab {
+
+    height: 40px;
+
+    width: 140px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    top: 5px;
+
+    right: 5px;
+
+    border-radius: 15px;
+
+    background-color: white;
+
+    cursor: pointer;
+
+}
+
+
+
+.list {
+
+    width: 450px;
+
+    padding: 10px;
+
+    position: absolute;
+
+    left: 25px;
+
+    top: 70px;
+
+    height: 520px;
+
+    border-radius: 20px;
+
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    background-color: #247037;
+
+    -ms-overflow-style: none;
+
+    scrollbar-width: none;
+
+}
+
+
+
+.list-item {
+
+    width: 300px;
+
+    height: 60px;
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+}
+
+
+
+.list-item h5 {
+
+    position: relative;
+
+    left: 40px;
+
+    margin-top: 30px;
+
+    font-weight: bold;
+
+}
+
+
+
+.list-item-me {
+
+    width: 300px;
+
+    height: 60px;
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+    left: 130px;
+
+}
+
+
+
+.list-item-me h5 {
+
+    position: relative;
+
+    left: 0;
+
+    margin-top: 30px;
+
+    font-weight: bold;
+
+}
+
+
+
+.circle {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    background-color: aqua;
+
+    position: absolute;
+
+    bottom: 5px;
+
+    left: 5px;
+
+}
+
+
+
+.circle img {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+}
+
+
+
+.circle-me {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    bottom: 5px;
+
+    right: 5px;
+
+    background-color: #073313;
+
+}
+
+
+
+.circle-me img {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+}
+
+
+
+.message {
+
+    width: 260px;
+
+    height: 60px;
+
+    margin-bottom: 15px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    position: relative;
+
+    left: 40px;
+
+    font-size: 18px;
+
+    padding: 8px;
+
+}
+
+
+
+.message-me {
+
+    width: 260px;
+
+    height: 60px;
+
+    margin-bottom: 15px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    position: relative;
+
+    left: 0;
+
+    font-size: 18px;
+
+    text-align: left;
+
+    padding: 8px;
+
+}
+
+
+
+.footer {
+
+    width: 450px;
+
+    height: 50px;
+
+    position: absolute;
+
+    font-size: 25px;
+
+    left: 25px;
+
+    bottom: 11px;
+
+    border-radius: 30px;
+
+    background-color: rgb(219, 215, 215);
+
+}
+
+
+
+.circle-me1 {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background-color: #073313;
+
+    position: absolute;
+
+    bottom: 5px;
+
+    left: 10px;
+
+}
+
+
+
+.circle-me1 img {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+}
+
+
+
+.input-message input {
+
+    width: 345px;
+
+    height: 40px;
+
+    position: absolute;
+
+    bottom: 5px;
+
+    left: 55px;
+
+}
+
+
+
+.send-botton img {
+
+    position: absolute;
+
+    bottom: 5px;
+
+    right: 7px;
+
+    width: 40px;
+
+    height: 40px;
+
+    cursor: pointer;
+
+}
+
+
+
+.playlist-chat {
+
+    width: 750px;
+
+    padding: 10px;
+
+    position: relative;
+
+    left: 220px;
+
+    top: 110px;
+
+    height: 100%;
+
+    overflow-y: auto;
+
+    -ms-overflow-style: none;
+
+    scrollbar-width: none;
+
+}
+
+.song {
+
+    background: #126527;
+
+    color: white;
+
+    padding: 10px;
+
+    margin: 8px 0;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    height: 70px;
+
+    font-size: 16px;
+
+}
+
+.song .info {
+
+    flex: 1;
+
+}
+
+.song img {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    margin-right: 10px;
+
+}   
+
+.song button {
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+      }
