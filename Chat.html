@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musify</title>
+    <link rel="icon" type="image/png" href="image/musify-logo.png">
+    <link rel="stylesheet" href="MusicPlaylist.css">
+</head>
+<body>
+    <video autoplay loop muted plays-inline class="backgroundv">
+        <source src="image/video.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+        <span>Musify</span>
+        <input type="search" placeholder="Search for Song/Friends">
+        <div class="right-section">
+            <a href="Chats.html" style="color: white; text-decoration: none;"><span><img class="Chats" src="image/Chats.png">Chats</span></a>
+            <span><img class="notif" src="image/notification.png">Notifications</span>
+            <a href="MusicAboutUs.html" style="color: white; text-decoration: none;"><span><img class="About" src="image/about us.png">About Us</span></a>
+            <a href="MusicLogin.html" style="color: white; text-decoration: none;"><span><img class="Account" src="image/account.png"> Account</span></a>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="itemss">
+            <a href="MusicHomePage.html" style="color: white; text-decoration: none;"><img class="icon" src="image/home.png"></a>
+            <a href="MusicHomePage.html" style="color: white; text-decoration: none;"><div class="texts">Home</div></a>
+        </div>
+        <div class="itemss">
+            <a href="MusicPlaylists.html" style="color: white; text-decoration: none;"><img class="icon" src="image/playlists.png"></a>
+            <a href="MusicPlaylists.html" style="color: white; text-decoration: none;"><div class="texts">Playlists</div></a>
+        </div>
+        <div class="itemss">
+            <a href="MusicFavorites.html" style="color: white; text-decoration: none;"><img class="icon" src="image/favorites.png"></a>
+            <a href="MusicFavorites.html" style="color: white; text-decoration: none;"><div class="texts">Favorites</div></a>
+        </div>
+        <div class="itemss">
+            <a href="MusicNowPlaying.html" style="color: white; text-decoration: none;"><img class="icon" src="image/now playing.png"></a>
+            <a href="MusicNowPlaying.html" style="color: white; text-decoration: none;"><div class="texts">Now Playing</div></a>
+        </div>
+        <div class="itemss">
+            <a href="MusicRecentlyPlayed.html" style="color: white; text-decoration: none;"><img class="icon" src="image/recently played.png"></a>
+            <a href="MusicRecentlyPlayed.html" style="color: white; text-decoration: none;"><div class="texts">Recently Played</div></a>
+        </div>
+        <div class="itemss">
+            <img class="icon" src="image/settings.png">
+            <div class="texts">Settings</div>
+        </div>
+        <a href="MusicLogin.html" style="color: white; text-decoration: none;"><div class="itemss">
+            <img class="icon" src="image/logout.png">
+            <div class="texts">Logout</div>
+        </div></a>
+    </div>
+    <div class="Music_Chats">
+        <div class="Chats_Playing">
+            <img src="image/music.jpg" alt="album cover">
+            <h2>Multo (Live at The Cozy Cove)</h2>
+            <p>Cup of Joe</p>
+            <input type="range" id="progress" value="0" max="100" step="0.1">
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+            <div class="Chats_Controls">
+                <button>&#8634;</button>
+                <button>⏮</button>
+                <button>▶</button>
+                <button>⏭</button>
+            </div>
+        </div>
+    </div>
+    <div class="Chat">
+        <div class="Chat-box">
+            <div class="tabs">
+                <div class="active-chats">Chat</div>
+                <div class="active-tab">World Chat</div>
+                <div class="tab">Friends</div>
+            </div>
+            <div class="list">
+                <div class="list-item">
+                    <h5>Kinshen N. Bahian</h5>
+                    <div class="circle"><img src="image/kinshen.jpg" ></div>
+                    <div class="message">I'm making a playlist for the party—any suggestions?</div>
+                </div>
+                <div class="list-item">
+                    <h5>CaterenHope Dizon</h5>
+                    <div class="circle"><img src="image/cat.jpg" ></div>
+                    <div class="message">Definitely some upbeat hip hop!</div>
+                </div>
+                <div class="list-item">
+                    <h5>Frank Anthony G. Pamisa</h5>
+                    <div class="circle"><img src="image/frank.jpg" ></div>
+                    <div class="message">And some classic rock, like Queen!</div>
+                </div>
+                <div class="list-item">
+                    <h5>Jay Q. Sabuero</h5>
+                    <div class="circle"><img src="image/jay.jpg" ></div>
+                   <div class="message">How about pop and electronic too? Dua Lipa, Calvin Harris.</div>
+                </div>
+                <div class="list-item">
+                    <h5>Sam C. Saligumba</h5>
+                    <div class="circle"><img src="image/sam.png" ></div>
+                    <div class="message">Don’t forget indie—Arctic Monkeys!</div>
+                </div>
+                <div class="list-item">
+                    <h5>Shandy J. Salinas</h5>
+                    <div class="circle"><img src="image/shandy.jpg" ></div>
+                    <div class="message">Gotta have throwbacks—Spice Girls, Britney!</div>
+                </div>
+                <div class="list-item">
+                    <h5>Eryle Kris S. Santarita</h5>
+                    <div class="circle"><img src="image/eryle.jpg" ></div>
+                    <div class="message">R&B vibes, like SZA and The Weeknd.</div>
+                </div>
+                <div class="list-item-me">
+                    <h5>Myname</h5>
+                    <div class="message-me">And some chill lo-fi for when we need a break.</div>
+                    <div class="circle-me"><img src="image/musify-logo.png" ></div>
+                </div>
+                <div class="list-item">
+                    <h5>CaterenHope Dizon</h5>
+                    <div class="circle"><img src="image/cat.jpg" ></div>
+                    <div class="message">Oh, and throw in a bit of Travs Scott forsome hype moments!</div>
+                </div>
+                <div class="list-item">
+                    <h5>Jay Q. Sabuero</h5>
+                    <div class="circle"><img src="image/jay.jpg" ></div>
+                    <div class="message">Yes! Maybe a few dance tracks too, like Marshmello!</div>
+                </div>
+                <div class="list-item">
+                    <h5>Kinshen N. Bahian</h5>
+                    <div class="circle"><img src="image/kinshen.jpg" ></div>
+                    <div class="message">Perfect! Mixing it all in!</div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="circle-me1"><img src="image/musify-logo.png" ></div>
+                <div class="input-message"><input type="text" placeholder="Enter Message"></div>
+                <div class="send-botton"><img src="image/send.png"></div>
+            </div>
+        </div>
+    </div>
+    <div class="playlist-chat">
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>BAHIAN song's</h4></marquee>
+                <p>BAHIAN</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>DIZON song's</h4></marquee>
+                <p>DIZON</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>PAMISA song's</h4></marquee>
+                <p>PAMISA</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>SABUERO song's</h4></marquee>
+                <p>SABUERO</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>SALIGUMBA song's</h4></marquee>
+                <p>SALIGUMBA</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>SALINAS song's</h4></marquee>
+                <p>SALINAS</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>SANTARITA song's</h4></marquee>
+                <p>SANTARITA</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>SAMPLE TITLE</h4></marquee>
+                <p>ARTIST</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>SAMPLE TITLE</h4></marquee>
+                <p>ARTIST</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>SAMPLE TITLE</h4></marquee>
+                <p>ARTIST</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>SAMPLE TITLE</h4></marquee>
+                <p>ARTIST</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>SAMPLE TITLE</h4></marquee>
+                <p>ARTIST</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+        <div class="song">
+            <img src="image/music.jpg" alt="Album">
+            <div class="info">
+                <marquee behavior="scroll" direction="left" scrollamount="7"> <h4>SAMPLE TITLE</h4></marquee>
+                <p>ARTIST</p>
+            </div>
+            <button>&#9654;</button>
+        </div>
+    </div>
+</body>
+  </html>
